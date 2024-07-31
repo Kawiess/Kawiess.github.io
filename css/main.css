@@ -1,7 +1,74 @@
-h1 {
-        text-align: center;
+:root {
+        --couleur1: green;
+        --couleur2: darkgreen;
+        --couleur3: rgba(0, 128, 0, 0.2);
+        --col-menu: lightsalmon;
+}
+body { padding: 0 10px; }
+
+/*===============================================/
+/               ÉLÉMENTS COMMUNS                /
+/=============================================*/
+
+/** --- Éléments à centrer --- **/
+nav, section, footer { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
 
-p {
+/** --- Éléments à arrondir --- **/
+nav, footer>div {
+        border-radius: 20px;
+}
+
+/** --- Liens --- **/
+a {
+        color: var(--couleur1);
+        text-decoration: none;
+        width: min-content;
+        margin: 0 10px;
+}
+a:hover {
+        color: var(--couleur2);
         font-weight: bold;
+        font-size: 90%;
+}
+
+/*===============================================/
+/               ÉLÉMENTS SPÉCIFIQUES            /
+/=============================================*/
+
+/** --- Entête --- **/
+header {
+        position: relative;
+        h2 {
+                text-align: center;
+                font-weight: bold;
+                color: var(--couleur2);
+        }
+        #flag {
+                display: none;
+                position: absolute;
+                right: 5px;
+                top: 10px;
+                img { max-width: 30px; }
+        }
+}
+nav {
+        background-color: var(--col-menu);
+        margin-bottom: 10px;
+}
+
+/** --- Corps --- **/
+section { height: calc(100vh - 140px); }
+
+/** --- Pied-de-page --- **/
+footer {
+        div {
+                background-color: var(--couleur3);
+                position: fixed;
+                bottom: 10px;
+                padding: 5px;
+        }
 }
